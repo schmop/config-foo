@@ -1,0 +1,87 @@
+//configuration {
+//    modi: "window,drun,ssh,combi";
+//    font: "hack 20";
+//    combi-modi: "window,drun,ssh";
+//    icon-theme: "Papirus";
+//    show-icon: true;
+//}
+//@theme "solarized"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi" 
+
+//element-icon {
+//    size: 18;
+//    border: 0px;
+//}
+
+configuration {
+    modi: "drun,combi";
+    font: "JetBrainsMonoMedium Nerd Font 20";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+//    display-drun: "   ";
+    drun-display-format: "{icon} {name}";
+    width: 40;
+    lines: 8;
+    columns: 1;
+    location: 0;
+    separator-style: "solid";
+    hide-scrollbar: true;
+    combi-display-format: "{text}";
+    combi {
+        display-name: "";
+    }
+}
+// clear the default theme.
+@theme "/dev/null"
+
+* {
+    highlight: bold italic;
+    colorBackground:                #1e1e20;
+    colorBackgroundSelected:        #282c34;
+    colorForeground:                #c8ccd4;
+    color01:                        #61afef;
+    color02:                        #98c379;
+    background-color:               @colorBackground;
+    text-color:                     @colorForeground;
+}
+window {
+   width: 40%;
+}
+mainbox {
+    padding: 5px;
+    border: 3px;
+    border-color: @color01;
+}
+
+listview {
+    border: 2px;
+    padding: 5px;
+lines:  8;
+columns: 1;
+}
+
+element {
+    padding: 5px;
+}
+
+element-icon {
+    size: 40px;
+}
+
+element selected {
+    background-color: @colorBackgroundSelected;
+    text-color: @color01;
+}
+
+element active {
+    text-color: @color02;
+}
+
+element selected.active {
+    text-color: @color02;
+}
+element-text, element-icon {
+  vertical-align: 0.5;
+  background-color: inherit;
+  text-color: inherit;
+}

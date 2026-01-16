@@ -1,0 +1,165 @@
+
+configuration {
+  font: 							    "Ubuntu Light 14";
+  show-icons:             true;
+  icon-theme:             "Papirus";
+  sidebar-mode:           false;
+}
+
+@import "colors.rasi"
+
+* {
+    background-color:             	@bg;
+}
+
+window {
+  transparency:     "real";
+  background-color: @bg;
+  text-color:       @fg;
+  border: 					1px;
+  border-color: 		@ac;
+  border-radius:	  5px;
+  width: 				  	30em;
+  location:         center;
+  x-offset:         0;
+  y-offset:         0;
+  padding:					15;
+}
+
+prompt {
+    enabled:            false;
+    padding:            0.30% 1% 0% -0.5%;
+    background-color:   @al;
+    text-color:         @bg;
+    font:               "FantasqueSansMono Nerd Font 12";
+}
+
+entry {
+    background-color:     @al;
+    text-color:           @bg;
+    placeholder-color:    @bg;
+    expand:               true;
+    horizontal-align:     0;
+    placeholder:          "Select audio output";
+    padding:              0.10% 0% 0% 0%;
+    blink:                true;
+}
+
+inputbar {
+  children:           [ prompt, entry ]; 
+  background-color:   @fg;
+  text-color:         @bg;
+  expand:             false;
+  border:             0% 0% 0% 0%;
+  border-radius:      0px;
+  border-color:       @ac;
+  margin:             0% 0% 0% 0%;
+  padding:            0.5%;
+}
+
+listview {
+  background-color:   @al;
+  padding:            10px;
+  columns:            1;
+  lines:							8;
+  spacing: 						0%;
+  cycle:              true;
+  dynamic:            true;
+  layout:             vertical;
+}
+
+mainbox {
+  background-color:   @al;
+  border:             0px;
+  border-radius:      0px;
+  border-color: 			@ac;
+  children:           [inputbar, listview];
+  spacing:            0%;
+  padding: 						0%;
+}
+
+element-text, element-icon {
+    background-color: #00000000;
+    text-color:       inherit;
+}
+
+element {
+    border: 						0px;
+    border-radius: 			0px;
+    padding: 						5px;
+}
+element normal.normal {
+    background-color: 				@bg;
+    text-color:       				@fg;
+}
+element normal.urgent {
+    background-color: 				@bg;
+    text-color:       				@red;
+}
+element normal.active {
+    background-color: 				@green;
+    text-color:       				@bg;
+}
+element selected {
+  background-color: @ac;
+  text-color:       @bg;
+  border:           0% 0% 0% 0%;
+  border-radius:    0px;
+  border-color:     @bg;
+}
+element alternate.normal {
+    background-color: 				@bg;
+    text-color:       				@fg;
+}
+element alternate.urgent {
+    background-color: 				@bg;
+    text-color:       				@fg;
+}
+element alternate.active {
+    background-color: 				@bg;
+    text-color:       				@fg;
+}
+
+sidebar {
+    border:       					0px;
+    border-color: 					@ac;
+    border-radius: 					0px;
+}
+
+button {
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    background-color:             	@fg;
+    margin: 						5px;
+    padding: 						5px;
+    text-color: 					@bg;
+    border: 						0px;
+    border-radius: 					4px;
+    border-color: 					@fg;
+}
+
+button selected {
+    background-color:             	@ac;
+    text-color: 					@fg;
+    border: 						0px;
+    border-radius: 					4px;
+    border-color: 					@fg;
+}
+
+scrollbar {
+    width:        					4px;
+    border:       					0px;
+    handle-color: 					@fg;
+    handle-width: 					8px;
+    padding:      					0;
+}
+
+message {
+    border: 						0px;
+    border-color: 					@ac;
+    padding: 						1px;
+}
+
+textbox {
+    text-color: 					@fg;
+}

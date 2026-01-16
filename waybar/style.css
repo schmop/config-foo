@@ -18,6 +18,7 @@ window#waybar {
 	background: #1a1a1a;
 }
 
+#custom-pomodoro,
 #workspaces,
 #network,
 #clock.1,
@@ -53,6 +54,7 @@ window#waybar {
 #pulseaudio {
 	color: #268bd2;
 }
+
 .custom-spotify {
     background-color: #1a1a1a;
     color: #1DB954;
@@ -77,10 +79,12 @@ window#waybar {
     color: #62a300;
 }
 
+#custom-pomodoro,
 #clock {
     font-size: 20px;
 }
 
+#custom-pomodoro,
 #clock,
 #pulseaudio,
 #memory,

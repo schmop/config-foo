@@ -16,7 +16,10 @@
         "sway/mode",
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
+        "custom/left-arrow-dark",
+        "custom/pomodoro",
+		"custom/left-arrow-light",
+        "custom/left-arrow-dark",
 		"clock#1",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -79,6 +82,10 @@
 		"disable-scroll": true,
 		"format": "{name}"
 	},
+    "custom/pomodoro": {
+        "exec": "/home/schmop/schmoppodoro/cli.ts status",
+        "interval": 1
+    },
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
@@ -98,7 +105,7 @@
 		"format-bluetooth": "{format_source} {icon}  {volume}%",
 		"format-muted": "MUTE",
         "format-source": "",
-        "format-source-muted": "\uf131  ",
+        "format-source-muted": "🙊 ",
 		"format-icons": {
 			"headphones": "",
 			"default": [
